@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Pantalla_Principal.Pantalla_Principal">
+
+    <item
+        android:title="add book"
+        android:id="@+id/menuItem_addBook"
+        android:orderInCategory="100"
+        android:icon="@drawable/icon_library"
+        app:showAsAction="ifRoom">
+    </item>
+
+    <item
+        android:title="user"
+        android:id="@+id/menuItem_bookmarks"
+        android:orderInCategory="100"
+        android:icon="@drawable/icon_bookmarck_collection"
+        app:showAsAction="ifRoom">
+    </item>
+
+</menu>

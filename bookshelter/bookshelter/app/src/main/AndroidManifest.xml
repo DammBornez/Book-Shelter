@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExtraText">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logotipo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logotipo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BookShelter"
+        tools:targetApi="31">
+        <activity
+            android:name=".librosEtiquetados.BookMarks"
+            android:exported="false"
+            android:label="Libros Etiquetados"
+            android:parentActivityName=".Pantalla_Principal.Pantalla_Principal"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".InfoLibros.Detalles_libros"
+            android:exported="false"
+            android:label="@string/title_activity_detalles_libros"
+            android:parentActivityName=".Pantalla_Principal.Pantalla_Principal"
+            android:theme="@style/Theme.BookShelter.NoActionBar"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".InfoLibros.Edit_libros"
+            android:exported="false"
+            android:label="Editar"
+            android:parentActivityName=".InfoLibros.Detalles_libros"
+            android:theme="@style/Theme.BookShelter.NoActionBar"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="Models.BookItem"
+            android:exported="false"
+            tools:ignore="MissingClass"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Pantalla_Principal.Pantalla_Principal"
+            android:exported="false"
+            android:windowSoftInputMode="adjustNothing"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.folioreader.ui.activity.SearchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Archivos_Dispositivo"
+            android:exported="false"
+            android:parentActivityName=".Pantalla_Principal.Pantalla_Principal"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+</manifest>

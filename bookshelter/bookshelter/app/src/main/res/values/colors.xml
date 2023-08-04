@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Colores por defecto -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores añadidos -->
+    <color name="mainColor">#8dbe00</color>
+    <color name="baseColor">#A6CE33</color>
+    <color name="accentuateColor">#C1DE6F</color>
+    <color name="accentuateColor2">#7FCF38</color>
+    <color name ="accentuateColor3">#8738CF</color>
+    <color name="popupBackground">#808080</color>
+    <color name="errorColor">#FF1C34</color> #FF9500
+    <color name="NARANJA">#FF9500</color>
+
+    <!-- Gradiante de verdes -->
+    <color name="gradiente0">#8dbe00</color>
+    <color name="gradiente1">#9DC724</color>
+    <color name="gradiente2">#ADD048</color>
+    <color name="gradiente3">#BDD96D</color>
+    <color name="gradiente4">#CEE391</color>
+    <color name="gradiente5">#DEECB6</color>
+    <color name="gradiente6">#EEF5DA</color>
+
+    <!-- Gradiante de marrons -->
+    <color name="gradienteM0">#89743D</color>
+    <color name="gradienteM1">#9D8546</color>
+    <color name="gradienteM2">#B2964F</color>
+    <color name="gradienteM3">#C6A758</color>
+    <color name="gradienteM4">#DBB962</color>
+    <color name="gradienteM5">#EFCA6B</color>
+    <color name="gradienteM6">#FFD772</color>
+
+</resources>

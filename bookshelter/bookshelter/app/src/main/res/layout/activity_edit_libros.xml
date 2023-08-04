@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_color"
+    tools:context=".InfoLibros.Edit_libros">
+
+    <ImageView
+        android:id="@+id/edit_portada"
+        android:layout_width="190dp"
+        android:layout_height="279dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049"
+        app:srcCompat="@drawable/libro_sin_portada" />
+
+    <RadioGroup
+        android:id="@+id/edit_radiogroup"
+        android:layout_width="176dp"
+        android:layout_height="245dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083">
+
+        <RadioButton
+            android:id="@+id/radioButton_sinMarcar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sin Etiqueta" />
+
+        <RadioButton
+            android:id="@+id/radioButton_leyendo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leyendo" />
+
+        <RadioButton
+            android:id="@+id/radioButton_leido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leido" />
+
+        <RadioButton
+            android:id="@+id/radioButton_favorito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorito" />
+
+        <RadioButton
+            android:id="@+id/radioButton_descartado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descartado" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="393dp"
+        android:layout_height="296dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/edit_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Título"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edit_autor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Autor"
+            android:textSize="15dp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/edit_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha"
+            android:textSize="15dp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/edit_idioma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Idioma"
+            android:textSize="15dp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/edit_editorial"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:hint="Editorial"
+            android:textSize="15dp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/edit_categoría"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Categoría"
+            android:textSize="15dp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFlotanteSave"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="16dp"
+        android:layout_marginStart="267dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/icon_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

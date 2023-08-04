@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.bookshelter'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.bookshelter"
+        minSdk 30
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.5.2'
+    implementation 'androidx.navigation:navigation-ui:2.5.2'
+
+    //Implementación de la librería de FolioReader
+    implementation "com.folioreader:folioreader:0.5.4"
+    implementation 'com.android.support:multidex:1.0.3' //(androidx)
+
+    configurations.matching {it.name == '_internal_aapt2_binary'}.all {
+        config -> config.resolutionStrategy.eachDependency { details -> details.useVersion("3.3.2-5309881") }
+    }
+
+    //Implementamos las dependencias para la biblioteca de "EpubLib"
+    implementation('nl.siegmann.epublib:epublib-core:3.1') {
+        exclude group: 'org.slf4j'
+        exclude group: 'xmlpull'
+    }
+    implementation 'org.slf4j:slf4j-android:1.7.25'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    //Epub4j
+    /*implementation('io.documentnode.epub4j:epub4j-core:3.0') {
+        exclude group: 'xmlpull'
+    }*/
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+
+allprojects {
+    repositories {
+
+    }
+}
+
